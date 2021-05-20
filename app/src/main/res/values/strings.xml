@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ToDo App Kotlin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Kotlin ToDo Application</string>
+    <string name="connexion">Se connecter</string>
+    <string name="inscription">S\'inscire</string>
+    <string name="email">Email</string>
+    <string name="mdp">Mot de passe</string>
+    <string name="login_title">login_title</string>
+    <string name="main_title">Kotlin ToDo Application</string>
+    <string name="first_name">Prénom</string>
+    <string name="last_name">Nom</string>
+</resources>
