@@ -1,14 +1,19 @@
 package com.example.todokotlin.presentation.views
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.todokotlin.R
+import com.example.todokotlin.domain.GlobalConstants
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
+    private lateinit var sharedPref : SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,5 +23,23 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
         navController = navHostFragment.navController
+
+        sharedPref = getSharedPreferences(GlobalConstants.SHARED_PREF_KEY, Context.MODE_PRIVATE)
+        val name = sharedPref.getString(GlobalConstants.KEY_USERNAME, null)
+        if (name != null) {
+            navigateMainToTodoList()
+        }
+    }
+
+    fun navigateMainToSignin() {
+        navController.navigate(R.id.action_mainFragment_to_signinFragment)
+    }
+
+    fun navigateMainToTodoList() {
+        navController.navigate(R.id.action_mainFragment_to_todoFragment)
+    }
+
+    fun navigateSigninToTodoList() {
+        navController.navigate(R.id.action_signinFragment_to_todoFragment)
     }
 }

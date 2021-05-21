@@ -1,5 +1,6 @@
 package com.example.todokotlin.domain
 
+import android.text.Editable
 import org.junit.Assert.*
 import org.junit.Test
 
