@@ -17,6 +17,7 @@
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
+        android:fontFamily="@font/roboto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +33,7 @@
         android:ems="10"
         android:hint="@string/mdp"
         android:inputType="textPassword"
+        android:fontFamily="@font/roboto"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -46,6 +48,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:text="@string/main_title"
+        android:fontFamily="@font/roboto_slab"
+        android:textSize="32sp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

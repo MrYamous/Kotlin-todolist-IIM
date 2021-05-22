@@ -34,7 +34,6 @@ class MainFragment : Fragment() {
         main_button_login.setOnClickListener {
             val mail: String = main_email.text.toString()
             val password: String = main_password.text.toString()
-            Log.i("click", "$mail $password")
             if (EmailUtils.isEmailValid(mail) && PasswordUtils.isPasswordValid(password)) {
                 (activity as MainActivity).navigateMainToTodoList()
             } else {
