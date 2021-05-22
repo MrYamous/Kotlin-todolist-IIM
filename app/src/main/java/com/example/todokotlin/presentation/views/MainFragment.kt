@@ -3,6 +3,7 @@ package com.example.todokotlin.presentation.views
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -26,15 +27,14 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        val mail: String = main_email.text.toString()
-        val password: String = main_password.text.toString()
-
         main_button_sign_in.setOnClickListener {
             (activity as MainActivity).navigateMainToSignin()
         }
 
         main_button_login.setOnClickListener {
+            val mail: String = main_email.text.toString()
+            val password: String = main_password.text.toString()
+            Log.i("click", "$mail $password")
             if (EmailUtils.isEmailValid(mail) && PasswordUtils.isPasswordValid(password)) {
                 (activity as MainActivity).navigateMainToTodoList()
             } else {
