@@ -10,4 +10,5 @@
     <string name="main_title">Kotlin ToDo Application</string>
     <string name="first_name">Prénom</string>
     <string name="last_name">Nom</string>
+    <string name="greetings">Bonjour</string>
 </resources>

@@ -2,7 +2,8 @@ package com.example.todokotlin.domain
 
 object GlobalConstants {
 
-    const val SHARED_PREF_KEY = "shared_pref"
-    const val KEY_USERNAME = "logged_username"
+    const val SHARED_PREF_KEY = "todo_app_userdata"
+    const val KEY_FIRSTNAME = "logged_firstname"
+    const val KEY_LASTNAME = "logged_lastname"
 
 }

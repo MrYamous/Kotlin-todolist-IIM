@@ -25,8 +25,9 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         sharedPref = getSharedPreferences(GlobalConstants.SHARED_PREF_KEY, Context.MODE_PRIVATE)
-        val name = sharedPref.getString(GlobalConstants.KEY_USERNAME, null)
-        if (name != null) {
+        val firstname = sharedPref.getString(GlobalConstants.KEY_FIRSTNAME, null)
+        val lastname = sharedPref.getString(GlobalConstants.KEY_LASTNAME, null)
+        if (firstname != null && lastname != null) {
             navigateMainToTodoList()
         }
     }
